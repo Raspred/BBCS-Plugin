@@ -1,0 +1,719 @@
+/*
+ * BotBlocker CSS File
+ *
+ * This CSS file contains styles related to the BotBlocker functionality in the project.
+ * It includes styles for blocking and preventing automated bot activities on the website.
+ *
+ * Author: GLOBUS.studio
+ * Version: 1.1.0
+ */
+a:focus {
+    color: inherit !important;
+    box-shadow: 0 0 0 2px transparent !important;
+    outline: 2px solid transparent !important;
+}
+
+body.toplevel_page_bbcs_dashboard #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_settings #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_integrations #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_reports #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_rules #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_tools #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_maintenance #wpcontent {
+    padding-left: 0;
+}
+
+body.botblocker_page_bbcs_pro #wpcontent {
+    padding-left: 0;
+}
+
+
+
+body.toplevel_page_bbcs_dashboard #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_settings #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_integrations #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_reports #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_rules #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_tools #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_maintenance #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+body.botblocker_page_bbcs_pro #wpbody {
+	color: #777;
+    background-color: #d9d9d9;
+	font-family: "Poppins", Arial, sans-serif;
+	line-height: 22px;
+	margin: 0;
+	font-size: 13px;
+}
+
+
+
+
+
+.language-menu {
+    width: 200px;
+}
+.language-title {
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.language-option .image {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-size: cover;
+}
+.language-option .title {
+    margin-left: 10px;
+}
+
+.bbcs_label_input_box{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bbcs_text_input_input{
+	width: 100%;
+}
+
+.bbcs_number_input_input{
+	width: 100%;
+}
+
+.bbcs_select_input_input{
+	width: 100%;
+}
+
+.bbcs_checkbox_input{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;	
+}
+
+.bbcs_label_checkbox_box{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;	
+}
+
+.bbcs_label_input_checkbox {
+	line-height: 16px;
+    padding-left: 5px;
+	margin-top: -2px;
+}
+
+.bbcs_settings_h3{
+	background: #e9f5ff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 4px;
+    border-radius: 4px;
+}
+
+.bbcs_status_main{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.bbcs_status_text{
+	font-size: 14px;
+	padding-left: 10px;
+    font-weight: 600;
+}
+
+.bbcs_color_green{
+	color: green;
+}
+
+.bbcs_color_red{
+	color: red;
+}
+
+.bbcs_pre{
+	line-height: 13px;
+    margin: 0;
+}
+
+.bbcs_small_header{
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bbcs_header_controls{
+	top: 8px;
+    right: 8px;
+}
+
+.card + .card {
+    margin-top: 20px; 
+}
+
+.row>* {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.bbcs_cybersecure-news {
+    list-style-type: /*disc*/ none;
+    padding-left: 0px; /*20*/
+	margin-bottom: 0px;
+}
+
+.bbcs_news-item {
+    margin-bottom: 10px;
+}
+
+.bbcs_news-date {
+    display: block;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: -6px;
+}
+
+.bbcs_news_a{
+    display: inline-block;
+    line-height: 1.0;
+    white-space: normal;
+    font-size: 11px;
+}
+
+table.table.dataTable tbody tr td {
+	line-height: 1.1;
+}
+
+
+
+
+#botblocker-ipv4-rules {
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+#botblocker-ipv4-rules th, 
+#botblocker-ipv4-rules td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+#botblocker-rules {
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+#botblocker-rules th, 
+#botblocker-rules td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+#botblocker-hits {
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+#botblocker-hits th, 
+#botblocker-hits td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+#botblocker-hits-admin {
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+#botblocker-hits-admin th, 
+#botblocker-hits-admin td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+#botblocker-other-admin {
+    table-layout: fixed;
+    width: 100% !important;
+}
+
+#botblocker-other-admin th, 
+#botblocker-other-admin td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+
+.dataTables_wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tab-content {
+	padding: 0px;
+    border: 0;
+    box-shadow: none;
+    border-top: 1px solid #dddddd;	
+}
+.tab-pane.container {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin: 0px;
+	min-width: 100%;
+}
+
+.nav-item{
+	outline: none !important;
+}
+
+.nav-link{
+	outline: none !important;
+}
+
+li.nav-item{
+	margin-bottom: 0px;
+}
+
+.nav-tabs li .nav-link{
+    color: #7a7a7a;
+}
+
+.bbcs-icon-button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font-size: inherit; 
+  }
+  
+  .bbcs-icon-button:focus {
+	outline: none;
+  }
+
+  .bbcs-icon-button i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+	color: #858585;
+}  
+
+.bbcs-h-btn-gray {
+	background-color: #f5f5f5;
+    color: #858585;
+    padding-right: 3px;
+}
+
+table.table.dataTable > :not(caption) > * > * {
+    background-color: transparent;
+}
+
+.modal.fade.show {
+    place-content: center;
+    align-items: center;
+}
+
+.modal-header {
+	padding-top: 10px;
+    padding-bottom: 10px;
+    background: #f6f6f6;
+}
+
+.modal-title {
+	color: #33353F;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 0;
+    text-transform: none;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+
+
+
+.bbcs_switch_container {
+	display: flex;
+	align-items: center;
+  }
+  
+  .bbcs_switch {
+	position: relative;
+	display: inline-block;
+	width: 32px;
+	height: 16px;
+	margin-right: 10px;
+  }
+  
+  .bbcs_switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .bbcs_slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 10px;
+  }
+  
+  .bbcs_slider:before {
+	position: absolute;
+	content: "";
+	height: 12px;
+	width: 12px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+  }
+  
+  input:checked + .bbcs_slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .bbcs_slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .bbcs_slider:before {
+	transform: translateX(15px);
+  }
+  
+  .bbcs_switch_label {
+	font-size: 14px;
+	cursor: pointer;
+  }
+
+  .bbcs_control_panel {
+	padding-top: 10px;
+  }
+
+  .bbcs-map-label-h{
+    font-size: 13px;
+    color: white;
+    letter-spacing: normal;
+    margin-bottom: 3px;
+    margin-top: 0px;
+  }
+
+  .bbcs-map-label-p{
+    font-size: 11px;
+    color: white;
+    letter-spacing: normal;
+    margin-bottom: 0px;
+  }
+
+  .bbcs-statistics-chart-title-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bbcs-statistics-chart-title {
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .bbcs-pro-features{
+    padding-left: 0px;
+  }
+
+.bbcs-pro-features li{
+    margin-bottom: 0px;
+}
+  .bbcs-gray {
+    color: #858585;
+  }
+
+  /* Google Chart Tooltip FIX*/
+  svg > g:last-child > g.google-visualization-tooltip {
+    pointer-events: none;
+   }
+
+   .bbcs-border-right {
+    border-right: 1px solid #d1d1d1;
+   }
+
+    .bbcs-border-left {
+     border-left: 1px solid #d1d1d1;
+    }
+
+.dt-buttons.btn-group .btn {
+    background: white;
+    color: black;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    border-color: #c7c7c7;
+}    
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-top-color: black;
+}
+
+.nav-link:hover {
+    border-top-color: black;
+    color: black;
+}
+
+.nav-item:hover {
+    border-top-color: black;
+    color: black;
+}
+
+.nav-tabs li .nav-link:hover {
+    border-top-color: black;
+    color: black;
+}
+
+.bbcs_settings_button{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn.btn-sm.bbcs-actions-b{
+    padding-left: 6px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.bbcs-rule-stat-h {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.bbcs-rule-stat-s {
+    font-size: 12px;
+    display: block;
+    font-weight: 400;
+}
+
+.bbcs-card-border-left {
+    border-left: 2px solid gray;
+}
+
+.header .logo {
+    float: left;
+    margin: 5px 0 0 17px;
+}
+
+.bbcs-health-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bbcs-health-list-item{
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.bbcs-price-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bbcs-price-item {
+    border: 1px solid silver;
+}
+
+.bbcs-card-body {
+    text-align: center;
+}
+
+.bbcs-badge {
+    display: inline-block;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.bbcs-price {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+}
+
+.bbcs-price-duration {
+    font-size: 24px;
+    color: #666;
+}
+
+.bbcs-description {
+    font-size: 16px;
+    color: #242424;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.bbcs-divider {
+    border: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+.bbcs-features {
+    list-style-type: none;
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.bbcs-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.bbcs-features li::before {
+    content: "✔";
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.bbcs-btn-primary {
+    display: inline-block;
+    background-color: #002855;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.bbcs-btn-primary:hover {
+    background-color: #004080;
+}
+
+.bbcs-footer-text {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+}

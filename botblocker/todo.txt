@@ -1,0 +1,162 @@
+If you are using an online payment system on your website, add the URL of your site, to which the payment system 
+(merchant, acquirer, or bank) sends payment notifications, to the allowed list in the fourth table of rules
+
+Ensure the security of your websites. Regularly check for viruses and malicious content using the following services:').
+' <a href="https://www.virustotal.com/gui/home/url" target="_blank" rel="noopener">VirusTotal</a>, 
+<a href="https://www.yandex.ru/safety" target="_blank" rel="noopener">Яндекс Safe Browsing</a>, 
+<a href="https://transparencyreport.google.com/safe-browsing/search?url='.$ab_config['scheme'].':%2F%2F'.$ab_config['host'].'%2F&hl='.$lang_code.'" 
+target="_blank" rel="noopener">Google Безопасный просмотр</a>.</div>';
+
+
+function add_default_paths_for_plugins() {
+    global $wpdb;
+    $table_name = $wpdb->prefix . 'bbcs_path';
+    $default_paths = [
+        ['priority' => 1, 'search' => '/wp-cron.php', 'rule' => 'allow', 'comment' => 'WordPress cron jobs', 'disable' => 0],
+        ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php', 'rule' => 'allow', 'comment' => 'WordPress AJAX', 'disable' => 0],
+        ['priority' => 1, 'search' => '/favicon.ico', 'rule' => 'allow', 'comment' => 'WordPress Favicon', 'disable' => 0]
+    ];
+
+    // Список плагинов и их пути
+    $plugins_paths = [
+        // WooCommerce
+        'woocommerce/woocommerce.php' => [
+            ['priority' => 1, 'search' => '/?wc-ajax=*', 'rule' => 'allow', 'comment' => 'WooCommerce AJAX', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wc-api/*', 'rule' => 'allow', 'comment' => 'WooCommerce API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/wc/*', 'rule' => 'allow', 'comment' => 'WooCommerce REST API', 'disable' => 0]
+        ],
+        // Yoast SEO
+        'wordpress-seo/wp-seo.php' => [
+            ['priority' => 1, 'search' => '/wp-json/yoast/v1/*', 'rule' => 'allow', 'comment' => 'Yoast SEO REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/wpseo/v1/*', 'rule' => 'allow', 'comment' => 'Yoast SEO REST API', 'disable' => 0]
+        ],
+        // Contact Form 7
+        'contact-form-7/wp-contact-form-7.php' => [
+            ['priority' => 1, 'search' => '/wp-json/contact-form-7/v1/*', 'rule' => 'allow', 'comment' => 'Contact Form 7 REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/contact-form-7/wp-json/*', 'rule' => 'allow', 'comment' => 'Contact Form 7 WP JSON', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/cf7/*', 'rule' => 'allow', 'comment' => 'Contact Form 7 CF7 JSON', 'disable' => 0]
+        ],
+        // Jetpack
+        'jetpack/jetpack.php' => [
+            ['priority' => 1, 'search' => '/wp-json/jetpack/v4/*', 'rule' => 'allow', 'comment' => 'Jetpack REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/xmlrpc.php', 'rule' => 'allow', 'comment' => 'Jetpack XML-RPC', 'disable' => 0]
+        ],
+        // Elementor
+        'elementor/elementor.php' => [
+            ['priority' => 1, 'search' => '/wp-json/elementor/v1/*', 'rule' => 'allow', 'comment' => 'Elementor REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/elementor/*', 'rule' => 'allow', 'comment' => 'Elementor', 'disable' => 0]
+        ],
+        // WP Super Cache
+        'wp-super-cache/wp-cache.php' => [
+            ['priority' => 1, 'search' => '/wp-content/cache/*', 'rule' => 'allow', 'comment' => 'WP Super Cache', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-content/wpcache/*', 'rule' => 'allow', 'comment' => 'WP Super Cache', 'disable' => 0]
+        ],
+        // Akismet
+        'akismet/akismet.php' => [
+            ['priority' => 1, 'search' => '/wp-json/akismet/v1/*', 'rule' => 'allow', 'comment' => 'Akismet REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/akismet/*', 'rule' => 'allow', 'comment' => 'Akismet', 'disable' => 0]
+        ],
+        // All-in-One WP Migration
+        'all-in-one-wp-migration/all-in-one-wp-migration.php' => [
+            ['priority' => 1, 'search' => '/wp-content/ai1wm-backups/*', 'rule' => 'allow', 'comment' => 'All-in-One WP Migration Backups', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php?action=ai1wm_*', 'rule' => 'allow', 'comment' => 'All-in-One WP Migration AJAX', 'disable' => 0]
+        ],
+        // Advanced Custom Fields (ACF)
+        'advanced-custom-fields/acf.php' => [
+            ['priority' => 1, 'search' => '/wp-json/acf/v3/*', 'rule' => 'allow', 'comment' => 'ACF REST API', 'disable' => 0]
+        ],
+        // UpdraftPlus
+        'updraftplus/updraftplus.php' => [
+            ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php?action=updraft_*', 'rule' => 'allow', 'comment' => 'UpdraftPlus AJAX', 'disable' => 0]
+        ],
+        // Wordfence
+        'wordfence/wordfence.php' => [
+            ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php?action=wordfence_*', 'rule' => 'allow', 'comment' => 'Wordfence AJAX', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php?action=wf*', 'rule' => 'allow', 'comment' => 'Wordfence AJAX', 'disable' => 0]
+        ],
+        // WPForms
+        'wpforms/wpforms.php' => [
+            ['priority' => 1, 'search' => '/wp-json/wpforms/v1/*', 'rule' => 'allow', 'comment' => 'WPForms REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/wpforms/*', 'rule' => 'allow', 'comment' => 'WPForms', 'disable' => 0]
+        ],
+        // Really Simple SSL
+        'really-simple-ssl/rlrsssl-really-simple-ssl.php' => [
+            ['priority' => 1, 'search' => '/wp-json/rlrsssl-really-simple-ssl/v1/*', 'rule' => 'allow', 'comment' => 'Really Simple SSL REST API', 'disable' => 0]
+        ],
+        // The Events Calendar
+        'the-events-calendar/the-events-calendar.php' => [
+            ['priority' => 1, 'search' => '/wp-json/tribe/*', 'rule' => 'allow', 'comment' => 'The Events Calendar REST API', 'disable' => 0]
+        ],
+        // bbPress
+        'bbpress/bbpress.php' => [
+            ['priority' => 1, 'search' => '/wp-json/bbp/v1/*', 'rule' => 'allow', 'comment' => 'bbPress REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/bbpress/v1/*', 'rule' => 'allow', 'comment' => 'bbPress REST API', 'disable' => 0]
+        ],
+        // Mailchimp for WordPress
+        'mailchimp-for-wp/mailchimp-for-wp.php' => [
+            ['priority' => 1, 'search' => '/wp-json/mc4wp/v1/*', 'rule' => 'allow', 'comment' => 'Mailchimp for WordPress REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-json/mc4wp/*', 'rule' => 'allow', 'comment' => 'Mailchimp for WordPress', 'disable' => 0]
+        ],
+        // WPML
+        'sitepress-multilingual-cms/sitepress.php' => [
+            ['priority' => 1, 'search' => '/wp-json/wpml/*', 'rule' => 'allow', 'comment' => 'WPML REST API', 'disable' => 0],
+            ['priority' => 1, 'search' => '/wp-admin/admin-ajax.php?action=wpml_*', 'rule' => 'allow', 'comment' => 'WPML AJAX', 'disable' => 0]
+        ],
+        // MonsterInsights
+        'google-analytics-for-wordpress/googleanalytics.php' => [
+            ['priority' => 1, 'search' => '/wp-json/monsterinsights/v1/*', 'rule' => 'allow', 'comment' => 'MonsterInsights REST API', 'disable' => 0]
+        ]
+    ];
+
+    foreach ($plugins_paths as $plugin => $paths) {
+        if (is_plugin_active($plugin)) {
+            $default_paths = array_merge($default_paths, $paths);
+        }
+    }
+
+    // Сохраните $default_paths в базу данных или используйте его по вашему усмотрению
+    foreach ($default_paths as $path) {
+        $wpdb->insert($table_name, $path);
+    }
+}
+
+// Запуск функции
+add_default_paths_for_plugins();
+
+
+
+<div class="row">
+<div class="col-md-6">
+			<section class="card">
+				<div class="card-body">
+
+					<p><small>
+							<span style="color:green;"><?php echo bbcs_customTranslate('Your IP:'); ?> <strong></strong></span>
+							<?php echo bbcs_customTranslate('IPv4 address type «123.123.123.123» or IPv6 type «1234:abcd:1234:abcd:1234:abcd:1234:abcd» or in a shorter form - the first 3 parts of IPv4 address: «123.123.123» (if you need to add the entire subnet by mask /24) or for IPv6 the first 4 parts: «1234:abcd:1234:abcd» (subnet by mask /64).'); ?>
+						</small></p>
+					<hr />
+					<p><small>
+							<?php echo bbcs_customTranslate('Rules by country, language, referrer, ptr - you can add only to the black list.'); ?><br />
+							<span style="color:red;"><?php echo bbcs_customTranslate('Blocking by country'); ?></span> -
+							<?php echo bbcs_customTranslate('add 2 uppercase country codes (example: US). List of country codes:'); ?>
+							<a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements" target="_blank">ISO 3166-1 alpha-2</a><br />
+							<span style="color:red;"><?php echo bbcs_customTranslate('Blocking by browser language'); ?></span> -
+							<?php echo bbcs_customTranslate('2 lowercase alphabetic language codes (example: en). List of language codes:'); ?>
+							<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank">ISO 639-1</a><br />
+							<span style="color:red;"><?php echo bbcs_customTranslate('Blocking by referrer'); ?></span> -
+							<?php echo bbcs_customTranslate('add a domain (host only, without protocol and internal pages), in the form: spamsite.com'); ?><br />
+							<span style="color:red;"><?php echo bbcs_customTranslate('Blocking by PTR'); ?></span> -
+							<?php echo bbcs_customTranslate('add a domain from PTR, but not the whole, but only 2 or 3 level domains, i.e. if in statistics you see a PTR of the form: «ec2-52-15-190-240.us-east-2.compute.amazonaws.com», then you need to add «compute.amazonaws.com» или «amazonaws.com».'); ?>
+							<a href="https://botblocker.cloud/static/Bad_PTR.txt" target="_blank"><?php echo bbcs_customTranslate('My list is for PTR blocking.'); ?></a>
+						</small></p>
+
+					<p><?php echo bbcs_customTranslate('Total rules:'); ?></p>
+					<p><strong><?php echo bbcs_customTranslate('Check condition'); ?></strong> - <?php echo bbcs_customTranslate('data to search during the check (field values are unique).'); ?><br />
+						<strong><?php echo bbcs_customTranslate('Rule'); ?></strong> - <?php echo bbcs_customTranslate('allow white list (white) or black list (black) prohibit.'); ?><br />
+						<strong><?php echo bbcs_customTranslate('Comment'); ?></strong> - <?php echo bbcs_customTranslate('description or reason for adding.'); ?>
+					</p>
+				</div>
+			</section>
+		</div>
+</div>	
+</section>
